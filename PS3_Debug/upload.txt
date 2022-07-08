@@ -1,0 +1,3 @@
+open ftp://m:pass@192.168.137.238 -timeout=1 -passive=on
+put "C:\Users\Martin\Documents\visual studio 2010\Projects\MW2Evolve\PS3_Debug\Evolve.sprx" dev_hdd0/tmp/mrtn/
+exit

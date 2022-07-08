@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Zircon1.5", "ZirconMW2\ZirconMW2.vcxproj", "{5CFC7649-1B5E-4069-AFAA-0926EEB51429}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|PS3 = Debug|PS3
+		Release|PS3 = Release|PS3
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CFC7649-1B5E-4069-AFAA-0926EEB51429}.Debug|PS3.ActiveCfg = Debug|PS3
+		{5CFC7649-1B5E-4069-AFAA-0926EEB51429}.Debug|PS3.Build.0 = Debug|PS3
+		{5CFC7649-1B5E-4069-AFAA-0926EEB51429}.Release|PS3.ActiveCfg = Release|PS3
+		{5CFC7649-1B5E-4069-AFAA-0926EEB51429}.Release|PS3.Build.0 = Release|PS3
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1916E1F-D3BC-4063-A4F6-0E75C1AB92A8}
+	EndGlobalSection
+EndGlobal

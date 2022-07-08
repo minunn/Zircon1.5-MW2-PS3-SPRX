@@ -1,0 +1,26 @@
+﻿Build started 01/11/2017 18:57:21.
+     1>Project "C:\Users\Mini Franco\Desktop\OFFICIALLLLLLLLLLLLLLLL\en\Evolve source\MW2Evolve\MW2Evolve.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "PS3_Debug\MW2Evolve.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         MW2Evolve.vcxproj -> C:\Users\Mini Franco\Desktop\OFFICIALLLLLLLLLLLLLLLL\en\Evolve source\PS3_Debug\ZIRCONBYWIZIMODZ.sprx
+       CustomBuildStep:
+         Description: Performing Custom Build Step
+         call "C:\Users\Mini Franco\Desktop\OFFICIALLLLLLLLLLLLLLLL\en\Evolve source\PS3_Debug\fileupload2.bat"
+         :VCEnd
+         Connecting to 192.168.137.238 ...
+         Connection failed.
+         Timeout detected. (control connection)
+         
+         Connection failed.
+       FinalizeBuildStatus:
+         Deleting file "PS3_Debug\MW2Evolve.unsuccessfulbuild".
+         Touching "PS3_Debug\MW2Evolve.lastbuildstate".
+     1>Done Building Project "C:\Users\Mini Franco\Desktop\OFFICIALLLLLLLLLLLLLLLL\en\Evolve source\MW2Evolve\MW2Evolve.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.19

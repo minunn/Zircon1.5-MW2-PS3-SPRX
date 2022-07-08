@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|PS3">
+      <Configuration>Debug</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|PS3">
+      <Configuration>Release</Configuration>
+      <Platform>PS3</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5CFC7649-1B5E-4069-AFAA-0926EEB51429}</ProjectGuid>
+    <ProjectName>Zircon1.5</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>SNC</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>SNC</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <CustomBuildAfterTargets>PostBuildEvent</CustomBuildAfterTargets>
+    <TargetName>ZIRCONBYWIZIMODZ</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|PS3'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;__CELL_ASSERT__;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Warnings>TurnOffWarnings</Warnings>
+      <OptimizationLevel>Level1</OptimizationLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(SCE_PS3_ROOT)\target\ppu\lib\libc.a;$(SCE_PS3_ROOT)\target\ppu\lib\libnet_stub.a;$(SN_PS3_PATH)\ppu\lib\sn\libsn.a;$(SCE_PS3_ROOT)\target\ppu\lib\libm.a;$(SCE_PS3_ROOT)\target\ppu\lib\libio_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\liblv2_stub.a;$(SCE_PS3_ROOT)\target\ppu\lib\libsysutil_stub.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <InfoStripping>StripSymsAndDebug</InfoStripping>
+      <DataStripping>StripFuncsAndData</DataStripping>
+    </Link>
+    <CustomBuildStep>
+      <Command>call "$(TargetDir)fileupload2.bat"</Command>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>tmpOutput</Outputs>
+    </CustomBuildStep>
+    <ProjectReference>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|PS3'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bots_mp.cpp" />
+    <ClCompile Include="cstring.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="GameScriptFunctions.cpp" />
+    <ClCompile Include="g_hudelem.cpp" />
+    <ClCompile Include="g_scr_mp.cpp" />
+    <ClCompile Include="handle.cpp" />
+    <ClCompile Include="handleFunctions.cpp" />
+    <ClCompile Include="keyboard.cpp" />
+    <ClCompile Include="Memory.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="pFunctions.cpp" />
+    <ClCompile Include="pMenu.cpp" />
+    <ClCompile Include="prx.cpp" />
+    <ClCompile Include="q_math.cpp" />
+    <ClCompile Include="sockets.cpp" />
+    <ClCompile Include="stdio.cpp" />
+    <ClCompile Include="stdlib.cpp" />
+    <ClCompile Include="string.cpp" />
+    <ClCompile Include="vector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bots_mp.h" />
+    <ClInclude Include="client.h" />
+    <ClInclude Include="cstring.h" />
+    <ClInclude Include="dvar.h" />
+    <ClInclude Include="entity.h" />
+    <ClInclude Include="fieldInvoker.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="GameScriptFunctions.h" />
+    <ClInclude Include="g_hudelem.h" />
+    <ClInclude Include="g_scr.h" />
+    <ClInclude Include="g_scr_mp.h" />
+    <ClInclude Include="handle.h" />
+    <ClInclude Include="handleFunctions.h" />
+    <ClInclude Include="Includes.h" />
+    <ClInclude Include="keyboard.h" />
+    <ClInclude Include="level.h" />
+    <ClInclude Include="Memory.h" />
+    <ClInclude Include="menu.h" />
+    <ClInclude Include="notifyInvoker.h" />
+    <ClInclude Include="pFunctions.h" />
+    <ClInclude Include="pMenu.h" />
+    <ClInclude Include="q_math.h" />
+    <ClInclude Include="sockets.h" />
+    <ClInclude Include="stdio.h" />
+    <ClInclude Include="stdlib.h" />
+    <ClInclude Include="string.h" />
+    <ClInclude Include="threads.h" />
+    <ClInclude Include="vector.h" />
+  </ItemGroup>
+  <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
